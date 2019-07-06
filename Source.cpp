@@ -26,7 +26,7 @@ int main() {
 
 
 	int widthLimit = src.channels() * src.cols;
-	for (int height = 0; height < src.rows; height++) {         //濾除背景&增強影像
+	for (int height = 0; height < src.rows; height++) {        
 		for (int width = 0; width < widthLimit; width++) {
 			uchar X_Y = src.at<uchar>(height, width);
 			if (X_Y > 140) src.at<uchar>(height, width) = 255;
